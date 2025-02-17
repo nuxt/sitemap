@@ -22,5 +22,20 @@ export default defineNuxtConfig({
     autoLastmod: false,
     credits: false,
     debug: true,
+    sitemaps: {
+      foo: {
+        sources: ['/api/sitemap/foo'],
+        defaults: {
+          changefreq: 'weekly',
+          priority: 0.7,
+        },
+      },
+      bar: {
+        sources: ['/api/sitemap/bar'],
+      },
+      empty: {
+        sources: ['/api/sitemap/empty'],
+      },
+    },
   },
 })
